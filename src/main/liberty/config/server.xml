@@ -1,0 +1,14 @@
+<server description="Dukes Data Demo">
+    <featureManager>
+        <platform>jakartaee-11.0</platform>
+        <feature>restfulWS</feature>
+        <feature>jsonb</feature>
+        <feature>cdi</feature>
+        <feature>concurrent</feature>
+    </featureManager>
+
+    <httpEndpoint id="defaultHttpEndpoint"
+                  httpPort="8080"/>
+    <webApplication location="dukes-virtual.war" contextRoot="/dukes"/>
+
+</server>
