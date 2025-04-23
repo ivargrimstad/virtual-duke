@@ -79,7 +79,8 @@
                     <container>
                         <containerId>glassfish8x</containerId>
                         <zipUrlInstaller>
-                            <url>https://download.eclipse.org/ee4j/glassfish/web-8.0.0-M10.zip</url>
+<!--                            <url>https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-JDK17-M10.zip</url>-->
+                            <url>https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-M10.zip</url>
                         </zipUrlInstaller>
                     </container>
                 </configuration>
