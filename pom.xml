@@ -81,17 +81,38 @@
                         <zipUrlInstaller>
                             <url>https://download.eclipse.org/ee4j/glassfish/web-8.0.0-M10.zip</url>
                         </zipUrlInstaller>
-<!--                        <containerId>payara</containerId>-->
-<!--                        &lt;!&ndash; requires Java 21 &ndash;&gt;-->
-<!--                        <zipUrlInstaller>-->
-<!--                            <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha1/payara-7.2025.1.Alpha1.zip</url>-->
-<!--                        </zipUrlInstaller>-->
                     </container>
                 </configuration>
             </plugin>
 
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>payara</id>
+            <build>
+                <finalName>virtual-duke</finalName>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.cargo</groupId>
+                        <artifactId>cargo-maven3-plugin</artifactId>
+                        <version>1.10.18</version>
+                        <configuration>
+                            <container>
+                                <containerId>payara</containerId>
+                                <!-- requires Java 21 -->
+                                <zipUrlInstaller>
+                                    <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha1/payara-7.2025.1.Alpha1.zip</url>
+                                </zipUrlInstaller>
+                            </container>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
 
 
