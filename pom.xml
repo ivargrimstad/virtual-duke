@@ -41,15 +41,33 @@
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
-                <version>3.8.2</version>
+                <version>3.10.3</version>
                 <configuration>
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>25.0.0.2-beta</version>
+                        <version>25.0.0.4-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>5.1.3.Final</version>
+                <configuration>
+                    <feature-packs>
+                        <feature-pack>
+                            <location>org.wildfly:wildfly-galleon-pack:36.0.0.Final</location>
+                        </feature-pack>
+                    </feature-packs>
+                    <layers>
+                        <!-- layers may be used to customize the server to provision-->
+                        <layer>jaxrs-server</layer>
+                        <layer>ee-concurrency</layer>
+                    </layers>
                 </configuration>
             </plugin>
 
