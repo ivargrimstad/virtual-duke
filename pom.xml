@@ -46,7 +46,7 @@
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>25.0.0.4-beta</version>
+                        <version>25.0.0.9-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 
@@ -60,7 +60,7 @@
                 <configuration>
                     <feature-packs>
                         <feature-pack>
-                            <location>org.wildfly:wildfly-galleon-pack:36.0.0.Final</location>
+                            <location>org.wildfly:wildfly-galleon-pack:37.0.0.Final</location>
                         </feature-pack>
                     </feature-packs>
                     <layers>
@@ -79,8 +79,8 @@
                     <container>
                         <containerId>glassfish8x</containerId>
                         <zipUrlInstaller>
-<!--                            <url>https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-JDK17-M10.zip</url>-->
-                            <url>https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-M10.zip</url>
+                            <url>https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-JDK17-M12.zip</url>
+<!--                            <url>https://download.eclipse.org/ee4j/glassfish/glassfish-8.0.0-M12.zip</url>-->
                         </zipUrlInstaller>
                     </container>
                 </configuration>
@@ -104,7 +104,7 @@
                                 <containerId>payara</containerId>
                                 <!-- requires Java 21 -->
                                 <zipUrlInstaller>
-                                    <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha1/payara-7.2025.1.Alpha1.zip</url>
+                                    <url>https://repo1.maven.org/maven2/fish/payara/distributions/payara/7.2025.1.Alpha4/payara-7.2025.1.Alpha4.zip</url>
                                 </zipUrlInstaller>
                             </container>
                         </configuration>
