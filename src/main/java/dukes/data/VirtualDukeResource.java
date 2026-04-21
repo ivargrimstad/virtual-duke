@@ -9,7 +9,7 @@ import jakarta.ws.rs.Path;
 public class VirtualDukeResource {
 
     @Resource(lookup = "java:app/concurrent/MyManagedThreadFactory")
-    ManagedThreadFactory threadFactory;
+    private ManagedThreadFactory threadFactory;
 
     @GET
     public String real() throws Exception {
