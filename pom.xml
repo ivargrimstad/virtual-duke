@@ -41,12 +41,12 @@
             <plugin>
                 <groupId>io.openliberty.tools</groupId>
                 <artifactId>liberty-maven-plugin</artifactId>
-                <version>3.11.5</version>
+                <version>3.12.0</version>
                 <configuration>
                     <runtimeArtifact>
                         <groupId>io.openliberty.beta</groupId>
                         <artifactId>openliberty-runtime</artifactId>
-                        <version>26.0.0.3-beta</version>
+                        <version>26.0.0.4-beta</version>
                         <type>zip</type>
                     </runtimeArtifact>
 

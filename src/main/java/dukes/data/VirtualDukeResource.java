@@ -1,19 +1,18 @@
 package dukes.data;
 
+import jakarta.annotation.Resource;
 import jakarta.enterprise.concurrent.ManagedThreadFactory;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 
-import javax.naming.InitialContext;
-
 @Path("/threads")
 public class VirtualDukeResource {
 
+    @Resource(lookup = "java:app/concurrent/MyManagedThreadFactory")
+    ManagedThreadFactory threadFactory;
+
     @GET
     public String real() throws Exception {
-
-        ManagedThreadFactory threadFactory = InitialContext
-                .doLookup("java:app/concurrent/MyManagedThreadFactory");
 
         Thread taskThread = threadFactory.newThread(() -> {
             System.out.printf("Running");
